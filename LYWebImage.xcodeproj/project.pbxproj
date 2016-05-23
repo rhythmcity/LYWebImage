@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BADB10071CF2E52500A1E9DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10061CF2E52500A1E9DE /* main.m */; };
+		BADB100A1CF2E52500A1E9DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10091CF2E52500A1E9DE /* AppDelegate.m */; };
+		BADB100D1CF2E52500A1E9DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB100C1CF2E52500A1E9DE /* ViewController.m */; };
+		BADB10101CF2E52500A1E9DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB100E1CF2E52500A1E9DE /* Main.storyboard */; };
+		BADB10121CF2E52500A1E9DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADB10111CF2E52500A1E9DE /* Assets.xcassets */; };
+		BADB10151CF2E52500A1E9DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADB10131CF2E52500A1E9DE /* LaunchScreen.storyboard */; };
+		BADB10201CF2E52600A1E9DE /* LYWebImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB101F1CF2E52600A1E9DE /* LYWebImageTests.m */; };
+		BADB102B1CF2E52600A1E9DE /* LYWebImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB102A1CF2E52600A1E9DE /* LYWebImageUITests.m */; };
+		BADB103B1CF2E55B00A1E9DE /* LYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB103A1CF2E55B00A1E9DE /* LYWebImageManager.m */; };
+		BADB103E1CF2E96400A1E9DE /* LYWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB103D1CF2E96400A1E9DE /* LYWebImageDownloader.m */; };
+		BADB10411CF3062700A1E9DE /* LYWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10401CF3062700A1E9DE /* LYWebImageDownloaderOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BADB101C1CF2E52600A1E9DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADB0FFA1CF2E52500A1E9DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADB10011CF2E52500A1E9DE;
+			remoteInfo = LYWebImage;
+		};
+		BADB10271CF2E52600A1E9DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADB0FFA1CF2E52500A1E9DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADB10011CF2E52500A1E9DE;
+			remoteInfo = LYWebImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BADB10021CF2E52500A1E9DE /* LYWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYWebImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADB10061CF2E52500A1E9DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BADB10081CF2E52500A1E9DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BADB10091CF2E52500A1E9DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BADB100B1CF2E52500A1E9DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BADB100C1CF2E52500A1E9DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BADB100F1CF2E52500A1E9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BADB10111CF2E52500A1E9DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BADB10141CF2E52500A1E9DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BADB10161CF2E52500A1E9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADB101B1CF2E52600A1E9DE /* LYWebImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYWebImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADB101F1CF2E52600A1E9DE /* LYWebImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebImageTests.m; sourceTree = "<group>"; };
+		BADB10211CF2E52600A1E9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADB10261CF2E52600A1E9DE /* LYWebImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYWebImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADB102A1CF2E52600A1E9DE /* LYWebImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYWebImageUITests.m; sourceTree = "<group>"; };
+		BADB102C1CF2E52600A1E9DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADB10391CF2E55B00A1E9DE /* LYWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageManager.h; sourceTree = "<group>"; };
+		BADB103A1CF2E55B00A1E9DE /* LYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageManager.m; sourceTree = "<group>"; };
+		BADB103C1CF2E96400A1E9DE /* LYWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageDownloader.h; sourceTree = "<group>"; };
+		BADB103D1CF2E96400A1E9DE /* LYWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageDownloader.m; sourceTree = "<group>"; };
+		BADB103F1CF3062700A1E9DE /* LYWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		BADB10401CF3062700A1E9DE /* LYWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BADB0FFF1CF2E52500A1E9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB10181CF2E52600A1E9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB10231CF2E52600A1E9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BADB0FF91CF2E52500A1E9DE = {
+			isa = PBXGroup;
+			children = (
+				BADB10041CF2E52500A1E9DE /* LYWebImage */,
+				BADB101E1CF2E52600A1E9DE /* LYWebImageTests */,
+				BADB10291CF2E52600A1E9DE /* LYWebImageUITests */,
+				BADB10031CF2E52500A1E9DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BADB10031CF2E52500A1E9DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BADB10021CF2E52500A1E9DE /* LYWebImage.app */,
+				BADB101B1CF2E52600A1E9DE /* LYWebImageTests.xctest */,
+				BADB10261CF2E52600A1E9DE /* LYWebImageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BADB10041CF2E52500A1E9DE /* LYWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				BADB10381CF2E53100A1E9DE /* LYWebImage */,
+				BADB10081CF2E52500A1E9DE /* AppDelegate.h */,
+				BADB10091CF2E52500A1E9DE /* AppDelegate.m */,
+				BADB100B1CF2E52500A1E9DE /* ViewController.h */,
+				BADB100C1CF2E52500A1E9DE /* ViewController.m */,
+				BADB100E1CF2E52500A1E9DE /* Main.storyboard */,
+				BADB10111CF2E52500A1E9DE /* Assets.xcassets */,
+				BADB10131CF2E52500A1E9DE /* LaunchScreen.storyboard */,
+				BADB10161CF2E52500A1E9DE /* Info.plist */,
+				BADB10051CF2E52500A1E9DE /* Supporting Files */,
+			);
+			path = LYWebImage;
+			sourceTree = "<group>";
+		};
+		BADB10051CF2E52500A1E9DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BADB10061CF2E52500A1E9DE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BADB101E1CF2E52600A1E9DE /* LYWebImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				BADB101F1CF2E52600A1E9DE /* LYWebImageTests.m */,
+				BADB10211CF2E52600A1E9DE /* Info.plist */,
+			);
+			path = LYWebImageTests;
+			sourceTree = "<group>";
+		};
+		BADB10291CF2E52600A1E9DE /* LYWebImageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BADB102A1CF2E52600A1E9DE /* LYWebImageUITests.m */,
+				BADB102C1CF2E52600A1E9DE /* Info.plist */,
+			);
+			path = LYWebImageUITests;
+			sourceTree = "<group>";
+		};
+		BADB10381CF2E53100A1E9DE /* LYWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				BADB10391CF2E55B00A1E9DE /* LYWebImageManager.h */,
+				BADB103A1CF2E55B00A1E9DE /* LYWebImageManager.m */,
+				BADB103C1CF2E96400A1E9DE /* LYWebImageDownloader.h */,
+				BADB103D1CF2E96400A1E9DE /* LYWebImageDownloader.m */,
+				BADB103F1CF3062700A1E9DE /* LYWebImageDownloaderOperation.h */,
+				BADB10401CF3062700A1E9DE /* LYWebImageDownloaderOperation.m */,
+			);
+			name = LYWebImage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BADB10011CF2E52500A1E9DE /* LYWebImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADB102F1CF2E52600A1E9DE /* Build configuration list for PBXNativeTarget "LYWebImage" */;
+			buildPhases = (
+				BADB0FFE1CF2E52500A1E9DE /* Sources */,
+				BADB0FFF1CF2E52500A1E9DE /* Frameworks */,
+				BADB10001CF2E52500A1E9DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYWebImage;
+			productName = LYWebImage;
+			productReference = BADB10021CF2E52500A1E9DE /* LYWebImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BADB101A1CF2E52600A1E9DE /* LYWebImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADB10321CF2E52600A1E9DE /* Build configuration list for PBXNativeTarget "LYWebImageTests" */;
+			buildPhases = (
+				BADB10171CF2E52600A1E9DE /* Sources */,
+				BADB10181CF2E52600A1E9DE /* Frameworks */,
+				BADB10191CF2E52600A1E9DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADB101D1CF2E52600A1E9DE /* PBXTargetDependency */,
+			);
+			name = LYWebImageTests;
+			productName = LYWebImageTests;
+			productReference = BADB101B1CF2E52600A1E9DE /* LYWebImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BADB10251CF2E52600A1E9DE /* LYWebImageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADB10351CF2E52600A1E9DE /* Build configuration list for PBXNativeTarget "LYWebImageUITests" */;
+			buildPhases = (
+				BADB10221CF2E52600A1E9DE /* Sources */,
+				BADB10231CF2E52600A1E9DE /* Frameworks */,
+				BADB10241CF2E52600A1E9DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADB10281CF2E52600A1E9DE /* PBXTargetDependency */,
+			);
+			name = LYWebImageUITests;
+			productName = LYWebImageUITests;
+			productReference = BADB10261CF2E52600A1E9DE /* LYWebImageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BADB0FFA1CF2E52500A1E9DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "李言";
+				TargetAttributes = {
+					BADB10011CF2E52500A1E9DE = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U4BHWUFC96;
+					};
+					BADB101A1CF2E52600A1E9DE = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U4BHWUFC96;
+						TestTargetID = BADB10011CF2E52500A1E9DE;
+					};
+					BADB10251CF2E52600A1E9DE = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U4BHWUFC96;
+						TestTargetID = BADB10011CF2E52500A1E9DE;
+					};
+				};
+			};
+			buildConfigurationList = BADB0FFD1CF2E52500A1E9DE /* Build configuration list for PBXProject "LYWebImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BADB0FF91CF2E52500A1E9DE;
+			productRefGroup = BADB10031CF2E52500A1E9DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BADB10011CF2E52500A1E9DE /* LYWebImage */,
+				BADB101A1CF2E52600A1E9DE /* LYWebImageTests */,
+				BADB10251CF2E52600A1E9DE /* LYWebImageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BADB10001CF2E52500A1E9DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB10151CF2E52500A1E9DE /* LaunchScreen.storyboard in Resources */,
+				BADB10121CF2E52500A1E9DE /* Assets.xcassets in Resources */,
+				BADB10101CF2E52500A1E9DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB10191CF2E52600A1E9DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB10241CF2E52600A1E9DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BADB0FFE1CF2E52500A1E9DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB10411CF3062700A1E9DE /* LYWebImageDownloaderOperation.m in Sources */,
+				BADB100D1CF2E52500A1E9DE /* ViewController.m in Sources */,
+				BADB103E1CF2E96400A1E9DE /* LYWebImageDownloader.m in Sources */,
+				BADB100A1CF2E52500A1E9DE /* AppDelegate.m in Sources */,
+				BADB10071CF2E52500A1E9DE /* main.m in Sources */,
+				BADB103B1CF2E55B00A1E9DE /* LYWebImageManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB10171CF2E52600A1E9DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB10201CF2E52600A1E9DE /* LYWebImageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADB10221CF2E52600A1E9DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADB102B1CF2E52600A1E9DE /* LYWebImageUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BADB101D1CF2E52600A1E9DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADB10011CF2E52500A1E9DE /* LYWebImage */;
+			targetProxy = BADB101C1CF2E52600A1E9DE /* PBXContainerItemProxy */;
+		};
+		BADB10281CF2E52600A1E9DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADB10011CF2E52500A1E9DE /* LYWebImage */;
+			targetProxy = BADB10271CF2E52600A1E9DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BADB100E1CF2E52500A1E9DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADB100F1CF2E52500A1E9DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BADB10131CF2E52500A1E9DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADB10141CF2E52500A1E9DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BADB102D1CF2E52600A1E9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BADB102E1CF2E52600A1E9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BADB10301CF2E52600A1E9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LYWebImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyan.LYWebImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BADB10311CF2E52600A1E9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LYWebImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyan.LYWebImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BADB10331CF2E52600A1E9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LYWebImageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyan.LYWebImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYWebImage.app/LYWebImage";
+			};
+			name = Debug;
+		};
+		BADB10341CF2E52600A1E9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LYWebImageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyan.LYWebImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYWebImage.app/LYWebImage";
+			};
+			name = Release;
+		};
+		BADB10361CF2E52600A1E9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LYWebImageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyan.LYWebImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYWebImage;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BADB10371CF2E52600A1E9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LYWebImageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyan.LYWebImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYWebImage;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BADB0FFD1CF2E52500A1E9DE /* Build configuration list for PBXProject "LYWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB102D1CF2E52600A1E9DE /* Debug */,
+				BADB102E1CF2E52600A1E9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADB102F1CF2E52600A1E9DE /* Build configuration list for PBXNativeTarget "LYWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB10301CF2E52600A1E9DE /* Debug */,
+				BADB10311CF2E52600A1E9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BADB10321CF2E52600A1E9DE /* Build configuration list for PBXNativeTarget "LYWebImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB10331CF2E52600A1E9DE /* Debug */,
+				BADB10341CF2E52600A1E9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BADB10351CF2E52600A1E9DE /* Build configuration list for PBXNativeTarget "LYWebImageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADB10361CF2E52600A1E9DE /* Debug */,
+				BADB10371CF2E52600A1E9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BADB0FFA1CF2E52500A1E9DE /* Project object */;
+}
