@@ -6,14 +6,15 @@
 //  Copyright © 2016年 李言. All rights reserved.
 //
 
-#import "LYWebImageDownloaderOperation.h"
-@interface LYWebImageDownloaderOperation ()<NSURLSessionDelegate,NSURLSessionDataDelegate>
+#import "LYWebImageDownloaderTask.h"
+@interface LYWebImageDownloaderTask ()<NSURLSessionDelegate,NSURLSessionDataDelegate>
 @property (nonatomic, strong)NSURLSession *session;
+@property (nonatomic, strong)NSMutableData *imageData;
 @property (assign, nonatomic, getter = isExecuting) BOOL executing;
 @property (assign, nonatomic, getter = isFinished) BOOL finished;
 @end
 
-@implementation LYWebImageDownloaderOperation
+@implementation LYWebImageDownloaderTask
 @synthesize executing = _executing , finished = _finished;
 
 - (instancetype)initWithRequestUrl:(NSURLRequest *)request
@@ -24,22 +25,12 @@
         _request = request;
         _progressBlock = [progressBlock copy];
         _completeBlock = [completed copy];
-        
-        
     }
 
     
     return self;
 }
-- (void)start {
-    
-    @synchronized(self) {
-        if (self.isCancelled) {
-            self.finished = YES;
-            [self clear];
-            return;
-        }
-    }
+- (NSURLSessionTask *)start {
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     self.session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
@@ -48,8 +39,7 @@
     
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request];
     
-    [dataTask resume];
-
+    return dataTask;
 }
 
 
@@ -66,6 +56,44 @@
     }
 
 
+}
+
+-(void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler{
+    self.imageData = [[NSMutableData alloc] init];
+    self.expectedSize = response.expectedContentLength;
+    if (dataTask.state == NSURLSessionTaskStateCanceling) {
+        _imageData = nil;
+    }
+    if (self.progressBlock) {
+        self.progressBlock(0,self.expectedSize);
+    }
+    
+    completionHandler(NSURLSessionResponseAllow);
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask
+    didReceiveData:(NSData *)data{
+    
+    [self.imageData appendData:data];
+    if (self.progressBlock) {
+        self.progressBlock(self.imageData.length,self.expectedSize);
+    }
+    
+}
+
+
+-(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
+    if (!error) {
+        UIImage *image = [UIImage imageWithData:self.imageData];
+        self.completeBlock(self.imageData,image,nil,YES);
+        [task cancel];
+        
+    }else{
+        self.completeBlock(self.imageData,nil,error,NO);
+        [task cancel];
+        
+    }
+    
 }
 - (void)clear {
     self.finished = NO;

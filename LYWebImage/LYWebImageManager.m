@@ -47,7 +47,7 @@ static NSString *const UIImageViewImageLoadKey = @"UIImageViewImageLoad";
         return nil;
     }
     
-    NSURLSessionDataTask *task = [[LYWebImageDownloader shareWebImageDownloader] downloaderImageWithDownloaderWithURL:url DownloaderProgressBlock:^(NSInteger receivedSize, NSInteger expectedSize) {
+    NSURLSessionTask *task = [[LYWebImageDownloader shareWebImageDownloader] downloaderImageWithDownloaderWithURL:url DownloaderProgressBlock:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             progressBlock(receivedSize,expectedSize);

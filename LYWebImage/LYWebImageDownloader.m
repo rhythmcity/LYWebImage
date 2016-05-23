@@ -47,17 +47,18 @@ static dispatch_queue_t ly_url_session_manager_creation_queue() {
     return _webImageDownloader;
 }
 
-- (NSURLSessionDataTask *)downloaderImageWithDownloaderWithURL:(NSURL *)url DownloaderProgressBlock:(LYDownloaderProgressBlock)progressBlock DownloaderCompletedBlock:(LYDownloaderCompleteBlock)completedBlock {
+- (NSURLSessionTask *)downloaderImageWithDownloaderWithURL:(NSURL *)url DownloaderProgressBlock:(LYDownloaderProgressBlock)progressBlock DownloaderCompletedBlock:(LYDownloaderCompleteBlock)completedBlock {
 
-    self.progressBlock = progressBlock;
-    self.completeBlock = completedBlock;
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    __block NSURLSessionDataTask *dataTask = nil;
-    dispatch_sync(ly_url_session_manager_creation_queue(), ^{
-        dataTask =  [self.session dataTaskWithRequest:request];
-    });
     
-    return dataTask;
+    if (!url) {
+        return nil;
+    }
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    LYWebImageDownloaderTask *task = [[LYWebImageDownloaderTask alloc] initWithRequestUrl:request progress:progressBlock completed:completedBlock];
+  
+    return [task start];;
 
 }
 

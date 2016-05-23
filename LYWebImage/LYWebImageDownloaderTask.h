@@ -12,7 +12,7 @@
 typedef void(^LYDownloaderProgressBlock)(NSInteger receivedSize,NSInteger expectedSize);
 typedef void(^LYDownloaderCompleteBlock)(NSData *data, UIImage *image, NSError *error,BOOL finished);
 typedef void(^LYDownloaderCancelBlock)();
-@interface LYWebImageDownloaderOperation : NSOperation
+@interface LYWebImageDownloaderTask : NSObject
 
 @property (nonatomic, copy)LYDownloaderProgressBlock progressBlock;
 @property (nonatomic, copy)LYDownloaderCompleteBlock completeBlock;
@@ -25,5 +25,5 @@ typedef void(^LYDownloaderCancelBlock)();
 - (instancetype)initWithRequestUrl:(NSURLRequest *)request
                           progress:(LYDownloaderProgressBlock)progressBlock
                          completed:(LYDownloaderCompleteBlock)completed;
-
+- (NSURLSessionTask *)start;
 @end

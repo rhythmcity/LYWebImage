@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA9651971CF348AC0078C0CC /* UIImageView+ly_WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9651961CF348AC0078C0CC /* UIImageView+ly_WebCache.m */; };
 		BA9651C51CF351C50078C0CC /* LYWebImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9651C41CF351C50078C0CC /* LYWebImageCache.m */; };
+		BA9651C81CF359B20078C0CC /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9651C71CF359B20078C0CC /* CustomTableCell.m */; };
 		BADB10071CF2E52500A1E9DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10061CF2E52500A1E9DE /* main.m */; };
 		BADB100A1CF2E52500A1E9DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10091CF2E52500A1E9DE /* AppDelegate.m */; };
 		BADB100D1CF2E52500A1E9DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB100C1CF2E52500A1E9DE /* ViewController.m */; };
@@ -19,7 +20,7 @@
 		BADB102B1CF2E52600A1E9DE /* LYWebImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB102A1CF2E52600A1E9DE /* LYWebImageUITests.m */; };
 		BADB103B1CF2E55B00A1E9DE /* LYWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB103A1CF2E55B00A1E9DE /* LYWebImageManager.m */; };
 		BADB103E1CF2E96400A1E9DE /* LYWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB103D1CF2E96400A1E9DE /* LYWebImageDownloader.m */; };
-		BADB10411CF3062700A1E9DE /* LYWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10401CF3062700A1E9DE /* LYWebImageDownloaderOperation.m */; };
+		BADB10411CF3062700A1E9DE /* LYWebImageDownloaderTask.m in Sources */ = {isa = PBXBuildFile; fileRef = BADB10401CF3062700A1E9DE /* LYWebImageDownloaderTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		BA9651961CF348AC0078C0CC /* UIImageView+ly_WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ly_WebCache.m"; sourceTree = "<group>"; };
 		BA9651C31CF351C50078C0CC /* LYWebImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageCache.h; sourceTree = "<group>"; };
 		BA9651C41CF351C50078C0CC /* LYWebImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageCache.m; sourceTree = "<group>"; };
+		BA9651C61CF359B20078C0CC /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		BA9651C71CF359B20078C0CC /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
 		BADB10021CF2E52500A1E9DE /* LYWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYWebImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADB10061CF2E52500A1E9DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BADB10081CF2E52500A1E9DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,8 +67,8 @@
 		BADB103A1CF2E55B00A1E9DE /* LYWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageManager.m; sourceTree = "<group>"; };
 		BADB103C1CF2E96400A1E9DE /* LYWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageDownloader.h; sourceTree = "<group>"; };
 		BADB103D1CF2E96400A1E9DE /* LYWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageDownloader.m; sourceTree = "<group>"; };
-		BADB103F1CF3062700A1E9DE /* LYWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageDownloaderOperation.h; sourceTree = "<group>"; };
-		BADB10401CF3062700A1E9DE /* LYWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		BADB103F1CF3062700A1E9DE /* LYWebImageDownloaderTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebImageDownloaderTask.h; sourceTree = "<group>"; };
+		BADB10401CF3062700A1E9DE /* LYWebImageDownloaderTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebImageDownloaderTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				BADB10091CF2E52500A1E9DE /* AppDelegate.m */,
 				BADB100B1CF2E52500A1E9DE /* ViewController.h */,
 				BADB100C1CF2E52500A1E9DE /* ViewController.m */,
+				BA9651C61CF359B20078C0CC /* CustomTableCell.h */,
+				BA9651C71CF359B20078C0CC /* CustomTableCell.m */,
 				BADB100E1CF2E52500A1E9DE /* Main.storyboard */,
 				BADB10111CF2E52500A1E9DE /* Assets.xcassets */,
 				BADB10131CF2E52500A1E9DE /* LaunchScreen.storyboard */,
@@ -163,8 +168,8 @@
 				BADB103A1CF2E55B00A1E9DE /* LYWebImageManager.m */,
 				BADB103C1CF2E96400A1E9DE /* LYWebImageDownloader.h */,
 				BADB103D1CF2E96400A1E9DE /* LYWebImageDownloader.m */,
-				BADB103F1CF3062700A1E9DE /* LYWebImageDownloaderOperation.h */,
-				BADB10401CF3062700A1E9DE /* LYWebImageDownloaderOperation.m */,
+				BADB103F1CF3062700A1E9DE /* LYWebImageDownloaderTask.h */,
+				BADB10401CF3062700A1E9DE /* LYWebImageDownloaderTask.m */,
 				BA9651951CF348AC0078C0CC /* UIImageView+ly_WebCache.h */,
 				BA9651961CF348AC0078C0CC /* UIImageView+ly_WebCache.m */,
 				BA9651C31CF351C50078C0CC /* LYWebImageCache.h */,
@@ -306,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BADB10411CF3062700A1E9DE /* LYWebImageDownloaderOperation.m in Sources */,
+				BADB10411CF3062700A1E9DE /* LYWebImageDownloaderTask.m in Sources */,
 				BADB100D1CF2E52500A1E9DE /* ViewController.m in Sources */,
 				BADB103E1CF2E96400A1E9DE /* LYWebImageDownloader.m in Sources */,
 				BADB100A1CF2E52500A1E9DE /* AppDelegate.m in Sources */,
@@ -314,6 +319,7 @@
 				BA9651971CF348AC0078C0CC /* UIImageView+ly_WebCache.m in Sources */,
 				BA9651C51CF351C50078C0CC /* LYWebImageCache.m in Sources */,
 				BADB103B1CF2E55B00A1E9DE /* LYWebImageManager.m in Sources */,
+				BA9651C81CF359B20078C0CC /* CustomTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
