@@ -8,7 +8,16 @@
 
 #import "LYWebImageManager.h"
 
+static NSString *const UIImageViewImageLoadKey = @"UIImageViewImageLoad";
+
+@interface LYWebImageManager ()
+
+
+@end
 @implementation LYWebImageManager
+
+
+
 + (LYWebImageManager *)shareManagre {
     static LYWebImageManager *_webImageManager = nil;
     static dispatch_once_t onceToken;
@@ -18,7 +27,7 @@
     return _webImageManager;
 }
 
-- (void)downLoadImageWithUrl:(NSURL *)url
+- (NSURLSessionTask *)downLoadImageWithUrl:(NSURL *)url
                     progress:(LYDownloaderProgressBlock)progressBlock
                    completed:(LYDownloaderCompleteBlock)completedBlock {
     
@@ -27,7 +36,7 @@
         NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorFileDoesNotExist userInfo:nil];
         
         !completedBlock?:completedBlock(nil,nil,error,NO);
-        return;
+        return nil;
     }
     
     if ([url isKindOfClass:[NSString class]]) {
@@ -35,10 +44,10 @@
     }
     
     if (![url isKindOfClass:[NSURL class]]) {
-        return;
+        return nil;
     }
     
-    [[LYWebImageDownloader shareWebImageDownloader] downloaderImageWithDownloaderWithURL:url DownloaderProgressBlock:^(NSInteger receivedSize, NSInteger expectedSize) {
+    NSURLSessionDataTask *task = [[LYWebImageDownloader shareWebImageDownloader] downloaderImageWithDownloaderWithURL:url DownloaderProgressBlock:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             progressBlock(receivedSize,expectedSize);
@@ -50,5 +59,13 @@
         });
         
     }];
+    
+    [task resume];
+    
+    return task;
+    
+    
 }
+
+
 @end

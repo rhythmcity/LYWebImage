@@ -12,7 +12,7 @@
 
 + (LYWebImageManager *)shareManagre;
 
-- (void)downLoadImageWithUrl:(NSURL *)url
+- (NSURLSessionTask *)downLoadImageWithUrl:(NSURL *)url
                     progress:(LYDownloaderProgressBlock)progressBlock
                    completed:(LYDownloaderCompleteBlock)completedBlock;
 @end

@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "LYWebImageDownloaderOperation.h"
-
 typedef void(^LYDownloaderProgressBlock)(NSInteger receivedSize,NSInteger expectedSize);
 typedef void(^LYDownloaderCompleteBlock)(NSData *data, UIImage *image, NSError *error,BOOL finished);
-
-@interface LYWebImageDownloader : NSObject
-
+typedef void(^LYDownloaderCancelBlock)();
+@interface LYWebImageDownloader : NSObject<NSURLSessionDataDelegate>
 @property (nonatomic, strong)NSOperationQueue *operationQueue;
-
 @property (nonatomic, strong)NSURLSession *session;
+@property (nonatomic, copy)LYDownloaderProgressBlock progressBlock;
+@property (nonatomic, copy)LYDownloaderCompleteBlock completeBlock;
+@property (nonatomic, copy)LYDownloaderCancelBlock  cancelBlock;
+
 + (LYWebImageDownloader *)shareWebImageDownloader;
 
-- (LYWebImageDownloaderOperation *)downloaderImageWithDownloaderWithURL:(NSURL *)url DownloaderProgressBlock:(LYDownloaderProgressBlock)progressBlock DownloaderCompletedBlock:(LYDownloaderCompleteBlock)completedBlock;
+- (NSURLSessionDataTask *)downloaderImageWithDownloaderWithURL:(NSURL *)url DownloaderProgressBlock:(LYDownloaderProgressBlock)progressBlock DownloaderCompletedBlock:(LYDownloaderCompleteBlock)completedBlock;
+
 @end
